@@ -12,7 +12,11 @@ const users: { id: number; name: string; email: string }[] = [];
 app.post("/users", (req: Request, res: Response) => {
     const { name, email } = req.body;
     const id = users.length + 1;
-    const newUser = { id, name, email };
+    const newUser = {
+        id,
+        name,
+        email
+    };
     users.push(newUser);
     res.status(201).json(newUser);
 });
@@ -40,7 +44,11 @@ app.put("/users/:id", (req: Request, res: Response) => {
     const userIndex = users.findIndex((u) => u.id === userId);
 
     if (userIndex !== -1) {
-        const updatedUser = { id: userId, name, email };
+        const updatedUser = {
+            id: userId,
+            name,
+            email
+        };
         users[userIndex] = updatedUser;
         res.json(updatedUser);
     } else {
