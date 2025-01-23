@@ -5,7 +5,10 @@
     "description": "",
     "main": "src/server.js",
     "scripts": {
-        "dev": "npx ts-node src/server.ts"
+        "dev:start": "npx ts-node src/server.ts",
+        "prod:build": "npx tsc -b",
+        "prod:node": "node --env-file=.env dist/server.js",
+        "prod:start": "npm run prod:build && npm run prod:node"
     },
     "keywords": [],
     "author": "",
@@ -14,14 +17,16 @@
         "@eslint/js": "^9.18.0",
         "@types/body-parser": "^1.19.5",
         "@types/express": "^5.0.0",
+        "@types/pg": "^8.11.11",
         "eslint": "^9.18.0",
         "globals": "^15.14.0",
         "typescript": "^5.7.3",
-        "typescript-eslint": "^8.21.0"
+        "typescript-eslint": "^8.21.0",
+        "ts-node": "^10.9.2"
     },
     "dependencies": {
         "body-parser": "^1.20.3",
         "express": "^4.21.2",
-        "ts-node": "^10.9.2"
+        "pg": "^8.13.1"
     }
 }

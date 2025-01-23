@@ -1,4 +1,4 @@
-import routerApp from "../router.ts";
+import routerApp from "../router";
 import { Request, Response } from "express";
 
 // In-memory data store (simulating a database)
