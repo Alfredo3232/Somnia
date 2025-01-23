@@ -4,7 +4,6 @@ import { Request, Response } from "express";
 // In-memory data store (simulating a database)
 const users: { id: number; name: string; email: string }[] = [];
 
-
 routerApp
     .route("/users")
     .get((_, res: Response) => {
@@ -18,6 +17,7 @@ routerApp
             name,
             email
         };
+
         users.push(newUser);
         res.status(201).json(newUser);
     });
@@ -27,10 +27,13 @@ routerApp
     .get((req: Request, res: Response) => {
         const userId = parseInt(req.params.id, 10);
         const user = users.find((u) => u.id === userId);
+
         if (user) {
             res.json(user);
         } else {
-            res.status(404).json({ message: "User not found" });
+            res.status(404).json({
+                message: "User not found"
+            });
         }
     })
     .put((req: Request, res: Response) => {
@@ -45,9 +48,14 @@ routerApp
                 email
             };
             users[userIndex] = updatedUser;
+
             res.json(updatedUser);
         } else {
-            res.status(404).json({ message: "User not found" });
+            res
+                .status(404)
+                .json({
+                    message: "User not found"
+                });
         }
     })
     .delete((req: Request, res: Response) => {
@@ -56,9 +64,12 @@ routerApp
 
         if (userIndex !== -1) {
             users.splice(userIndex, 1);
+
             res.status(204).send();
         } else {
-            res.status(404).json({ message: "User not found" });
+            res.status(404).json({
+                message: "User not found"
+            });
         }
     });
 

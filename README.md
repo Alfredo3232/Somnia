@@ -1,11 +1,9 @@
-
 # Somnia
 
 Somnia: Your AI companion for personal growth and well-being. Somnia helps you track health, goals, OCEAN scores, dreams, and provides tailored daily advice, guiding you toward a more balanced and fulfilling life.
 
 ## Core Idea
-A personalized companion app based on **Jungian psychology** designed for older adults, focused on **self-reflection**, **personal growth**, and **emotional well-being**. 
-!! - YES, im sorry i know the hate on these high level archetypes but as a prove of concept its a good place to start.  
+A personalized companion app based on **Jungian psychology** designed for older adults, focused on **self-reflection**, **personal growth**, and **emotional well-being**.
 
 The app helps users:
 - Set and track meaningful goals (health, family, work, friendships, education).
@@ -109,20 +107,20 @@ Table DailyLogs {
 
 ### Simplified Schema
 
-1. **Users Table**  
+1. **Users Table**
    Core user data, including login information and profile.
 
-2. **Personas Table**  
+2. **Personas Table**
    Tracks **dynamic persona rankings** (e.g., Explorer: 85%, Hero: 70%) based on the user's actions, dreams, and reflections.
 
-3. **Dream Logs Table**  
+3. **Dream Logs Table**
    Stores **full and summarized dreams**, **symbols**, and **emotional tones** to help with dream analysis and persona insights.
 
-4. **Daily Logs Table**  
+4. **Daily Logs Table**
    Tracks **habits**, **moods**, **health stats**, and **reflections**, forming a daily report to help users maintain a structured routine.
 
 ### Dynamic Persona Ranking
-- **Personas are ranked dynamically** based on user behavior, dream themes, and reflections.  
+- **Personas are ranked dynamically** based on user behavior, dream themes, and reflections.
 - These rankings help us understand the user’s evolving personality and offer **personalized guidance** accordingly.
 
 ### Dream Summarization
@@ -163,7 +161,7 @@ Table DailyLogs {
    - Utilize **social media** and **wellness influencers** for promotion.
 
 5. **RAG Implementation**:
-   - Example **RAG Prompt**:  
+   - Example **RAG Prompt**:
    Structured Prompt for a Journal Entry:
 
    ```
