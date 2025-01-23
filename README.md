@@ -185,3 +185,37 @@ Table DailyLogs {
 ---
 
 # End of File
+
+
+# Next Steps for Development:
+   - Prototype the Onboarding Flow: Start with goal-setting and OCEAN questions.
+      - Short Version (10 Questions)
+         Purpose: Quick and easy to complete during onboarding.
+        ```
+         1.Openness to Experience
+         Positive: "I enjoy exploring new ideas and experiences."
+         (Agree = High Openness)
+         Negative: "I prefer to stick with what I already know rather than trying something new."
+         (Agree = Low Openness)
+         2. Conscientiousness
+         Positive: "I like to plan and organize my tasks to stay on track."
+         (Agree = High Conscientiousness)
+         Negative: "I often leave things until the last minute or forget important details."
+         (Agree = Low Conscientiousness)
+         3. Extraversion
+         Positive: "I feel energized when I spend time with others."
+         (Agree = High Extraversion)
+         Negative: "I prefer quiet time alone rather than socializing with a group."
+         (Agree = Low Extraversion)
+         4. Agreeableness
+         Positive: "I try to see things from other people’s perspectives and help when I can."
+         (Agree = High Agreeableness)
+         Negative: "I find it difficult to trust or cooperate with others."
+         (Agree = Low Agreeableness)
+        ```
+      - Full Version (50–100 Questions)
+         Purpose: Highly detailed and accurate personality profile.
+
+   - Implement Dream Logging & AI Summarization: Develop a simple interface for dream entry and AI summaries.
+   - Focus on Key Features: Start with goal tracking, journaling, and persona tracking.
+   - User Testing: Test with a small group to refine the flow and get feedback on ease of use.
