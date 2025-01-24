@@ -5,7 +5,7 @@
     "description": "",
     "main": "src/server.js",
     "scripts": {
-        "dev:start": "npx ts-node src/server.ts",
+        "dev:start": "NODE_OPTIONS=\"-r ts-node/register --no-warnings\" node --watch --env-file=.env src/server.ts",
         "prod:build": "npx tsc -b",
         "prod:node": "node --env-file=.env dist/server.js",
         "prod:start": "npm run prod:build && npm run prod:node"
