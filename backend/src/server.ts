@@ -19,9 +19,8 @@ const startServer = () => {
         }
     };
 
-    if (cleanEnv.pg.port !== undefined && isNaN(cleanEnv.pg.port)) {
+    if (cleanEnv.pg.port !== undefined && isNaN(cleanEnv.pg.port))
         throw new Error("Invalid PG_PORT. Please ensure it's a valid number.");
-    }
 
     postgres.startDB(cleanEnv.pg);
 
@@ -35,6 +34,4 @@ const startServer = () => {
 };
 
 // Runs if the file is ran
-if (require.main === module) {
-    startServer();
-}
+if (require.main === module) startServer();
