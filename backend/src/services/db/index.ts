@@ -1,13 +1,20 @@
 import { Client } from "pg";
 
-export = () => {
-    // Database connection configuration
+interface pg {
+    database: string | undefined;
+    host: string | undefined;
+    password: string | undefined;
+    port: number | undefined;
+    user: string | undefined;
+}
+
+const startDB = (env: pg) => {
     const client = new Client({
-        user     : "", // Username you created
-        host     : "", // Assuming you're running PostgreSQL locally
-        database : "", // Database name you created
-        password : "", // Password you assigned to the user
-        port     : 0 // Default PostgreSQL port
+        user     : env.user,
+        host     : env.host,
+        database : env.database,
+        password : env.password,
+        port     : env.port
     });
 
     const connectDB = async () => {
@@ -37,4 +44,8 @@ export = () => {
     connectDB()
         .then(() => fetchData())
         .finally(() => closeDB());
+};
+
+export default {
+    startDB
 };
