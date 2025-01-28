@@ -1,0 +1,3 @@
+const getAllPersona = () => {};
+
+export { getAllPersona };

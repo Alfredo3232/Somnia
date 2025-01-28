@@ -1,0 +1,3 @@
+const getAllDreamLogs = () => {};
+
+export { getAllDreamLogs };
