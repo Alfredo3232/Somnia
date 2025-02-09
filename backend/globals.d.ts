@@ -1,4 +1,5 @@
 import { Pool } from "pg";
+import { OpenAI } from "openai";
 
 declare global {
     interface DepsType {
@@ -13,10 +14,30 @@ declare global {
             srv: {
                 port: number;
             };
+            llm: {
+                baseUrl: string | undefined;
+                apiKey: string | undefined;
+                model: string | undefined;
+                temperature: number | undefined;
+                top_p: number | undefined;
+                max_tokens: number | undefined;
+            };
         };
         db?: {
             pool: Pool;
             closeDB: () => Promise<void>;
+        };
+        llm?: {
+            client: OpenAI;
+            info: {
+                baseUrl: string | undefined;
+                apiKey: string | undefined;
+                messages: string | null;
+                model: string | undefined;
+                temperature: number | undefined;
+                top_p: number | undefined;
+                max_tokens: number | undefined;
+            };
         };
     }
 }
