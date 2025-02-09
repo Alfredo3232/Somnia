@@ -30,10 +30,8 @@ declare global {
         llm?: {
             client: OpenAI;
             info: {
-                baseUrl: string | undefined;
-                apiKey: string | undefined;
-                messages: string | null;
                 model: string | undefined;
+                messages: string | null;
                 temperature: number | undefined;
                 top_p: number | undefined;
                 max_tokens: number | undefined;

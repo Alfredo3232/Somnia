@@ -13,7 +13,7 @@ const startServer = async () => {
     };
 
     deps.db = startDB(deps.cleanEnv.pg);
-    deps.llm = startLlm(deps.cleanEnv.llm);
+    deps.llm = await startLlm(deps.cleanEnv.llm);
     const server = routerApp(deps);
 
 
